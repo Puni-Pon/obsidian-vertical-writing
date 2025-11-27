@@ -1,0 +1,48 @@
+/* 
+ * Obsidian Vertical Writing CSS Snippet
+ * 縦書き表示用CSSスニペット
+ * 
+ * Usage: Add "vertical" to cssclasses in frontmatter
+ * 使い方: フロントマターで cssclasses に "vertical" を指定
+ * 
+ * ---
+ * cssclasses:
+ *   - vertical
+ * ---
+ */
+
+/* 閲覧モード */
+.markdown-preview-view.vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-family: "游明朝", "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+  height: 80vh;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px;
+}
+
+/* 段落の間隔調整 */
+.markdown-preview-view.vertical p {
+  margin-left: 1.5em;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* 見出しの調整 */
+.markdown-preview-view.vertical h1,
+.markdown-preview-view.vertical h2,
+.markdown-preview-view.vertical h3 {
+  margin-left: 1em;
+}
+
+/* 縦中横（2桁数字などを横並びにする） */
+.markdown-preview-view.vertical .tcy {
+  text-combine-upright: all;
+}
+
+/* アルファベットを縦にする */
+.markdown-preview-view.vertical .upright {
+  text-orientation: upright;
+}
